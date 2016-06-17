@@ -1,0 +1,26 @@
+extends ./layout
+block content
+    .top-content
+        .inner-bg
+            .container
+                .row
+                    .col-sm-8.col-sm-offset-2.text
+                        h1 Добро пожаловать в <strong>Систему учета рекламаций</strong>!
+                .row
+                    .col-sm-6.col-sm-offset-3.form-box
+                        .form-top
+                            .form-top-left
+                                h3 Вход в систему
+                                p#login-message Введите Ваше имя пользователя и пароль
+                                p#login-error-message.login-error.hidden Ошибка
+                            .form-top-right
+                                i.fa.fa-lock
+                        .form-bottom
+                            form.login-form(role="form" action="" method="post")
+                                .form-group
+                                    label.sr-only(for="login-username") Пользователь
+                                    input#login-username.form-username.form-control(type="text", name="form-username", placeholder="Пользователь...")
+                                .form-group
+                                    label.sr-only(for="login-password") Пароль
+                                    input#login-password.form-password.form-control(type="password", name="form-password", placeholder="Пароль...")
+                                button#login-button.btn Войти

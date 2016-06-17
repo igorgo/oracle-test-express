@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    #wrapper
+        nav.navbar.navbar-default.navbar-static-top
+            .navbar-header
+                a.navbar-brand(href="/") <strong>Парус-Украина</strong> Проектно-методический отдел
+            ul.nav.navbar-top-links.navbar-right
+                li
+                    .top-link-item
+                        i.fa.fa-user.fa-fw
+                        span= userName
+                if mayLogOff
+                    li
+                        a(href="/logoff")
+                            i.fa.fa-sign-out.fa-fw
+                            span Выйти
+                else
+                    li
+                        a(href="/login")
+                            i.fa.fa-sign-in.fa-fw
+                            span Войти
+            .navbar-default.sidebar(role="navigation")
+                .sidebar-nav.navbar-collapse.in(aria-expanded="true")
+                    ul#side-menu.nav.in
+                        li
+                            a.active(href="/")
+                                i.fa.fa-dashboard.fa-fw
+                                span  Главная
+                        li
+                            a(href="events")
+                                i.fa.fa-bullhorn.fa-fw
+                                span  Рекламации
+        #page-wrapper(style="min-height: 295px;")
+            .row
+                .col-lg-12
+                    h1.page-header
+                        span
+                            strong Стабильный релиз:&nbsp;
+                        span#release-name-stable
+                    h4
+                        span
+                            strong Последняя сборка:&nbsp;
+                        span#release-build-stable
+

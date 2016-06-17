@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title='ПМО'
+        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(rel="stylesheet", href="/bower_components/roboto-fontface/css/roboto-fontface.css")
+        link(rel="stylesheet", href="/bower_components/bootstrap-drawer/dist/css/bootstrap-drawer.min.css")
+        link(rel="stylesheet", href="/bower_components/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="/bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css")
+        link(rel='stylesheet', href='/stylesheets/udp.css')
+        if pageCss
+            each val in pageCss
+                link(rel='stylesheet', href= val)
+    body
+        block content
+
+        script(src='/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/bower_components/bootstrap-drawer/dist/js/drawer.min.js')
+        script(src='/javascripts/global.js')
+        if pageScript
+            each val in pageScript
+                script(src= val)

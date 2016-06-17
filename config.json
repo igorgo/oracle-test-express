@@ -1,0 +1,7 @@
+{
+  "username": "NODE",
+  "password": "node",
+  "connectString" : "UDP",
+  "schema" : "PARUS",
+  "port" : 3016
+}

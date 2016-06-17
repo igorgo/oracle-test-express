@@ -1,0 +1,15 @@
+body {
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+.navbar-toggle {
+        display: block;
+        margin-left: 15px;
+        float: left;
+}
+
+.navbar-top-links li .top-link-item {
+    padding: 15px;
+    min-height: 50px;
+}
+
